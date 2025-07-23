@@ -1,27 +1,17 @@
-# 🕷️ GoScraper – A Powerful Go Web Scraping Package
-
 GoScraper is a lightweight but advanced Go module for web scraping. It helps developers extract key information from web pages such as metadata, links, images, and also provides content analysis like word count and estimated read time.
 
-> 📦 Built with simplicity, performance, and readability in mind.
+📦 Built with simplicity, performance, and readability in mind.
 
----
-
-## ✨ Features
-
-- ✅ Extract meta tags (title, description, keywords, author, OpenGraph)
-- 🖼️ Scrape all images with `src` and `alt`
-- 🔗 Collect all anchor links with their text
-- 🧠 Analyze page content for:
-  - Word count
-  - Estimated reading time
-  - Text summary (basic)
-- 🌐 Minimal external dependencies
-
----
-
-## 🔧 Installation
-
-```bash
+✨ Features
+✅ Extract meta tags (title, description, keywords, author, OpenGraph)
+🖼️ Scrape all images with src and alt
+🔗 Collect all anchor links with their text
+🧠 Analyze page content for:
+Word count
+Estimated reading time
+Text summary (basic)
+🌐 Minimal external dependencies
+🔧 Installation
 go get github.com/yarie4481/goscraper
 
 🧪 Usage
@@ -30,12 +20,12 @@ Here's how you can use GoScraper in your project:
 package main
 
 import (
-    "fmt"
-    "github.com/yarie4481/goscraper/scraper"
+"fmt"
+"github.com/yarie4481/goscraper/scraper"
 )
 
 func main() {
-    url := "https://example.com"
+url := "https://example.com"
 
     metadata, _ := scraper.GetMetadata(url)
     fmt.Println("Title:", metadata.Title)
@@ -51,16 +41,17 @@ func main() {
     fmt.Println("Word Count:", stats.WordCount)
     fmt.Println("Read Time (min):", stats.ReadTimeMin)
     fmt.Println("Summary:", stats.Summary)
+
 }
 
 📁 Folder Structure
 goscraper/
 ├── scraper/
-│   ├── scraper.go       // Core logic
-│   ├── helpers.go       // Internal utilities
-│   └── types.go         // Reusable types
+│ ├── scraper.go // Core logic
+│ ├── helpers.go // Internal utilities
+│ └── types.go // Reusable types
 ├── examples/
-│   └── demo.go          // Usage demo
+│ └── demo.go // Usage demo
 └── README.md
 
 🧠 How It Works
@@ -74,29 +65,28 @@ No JavaScript rendering – ideal for static pages
 
 � Types
 
-
 type Metadata struct {
-    Title       string
-    Description string
-    Keywords    []string
-    OGImage     string
-    Author      string
+Title string
+Description string
+Keywords []string
+OGImage string
+Author string
 }
 
 type Stats struct {
-    WordCount   int
-    ReadTimeMin int
-    Summary     string
+WordCount int
+ReadTimeMin int
+Summary string
 }
 
 type Image struct {
-    Src string
-    Alt string
+Src string
+Alt string
 }
 
 type Link struct {
-    Text string
-    Href string
+Text string
+Href string
 }
 
 🛠️ To-Do / Contributions Welcome
@@ -118,7 +108,6 @@ MIT © 2025 [Yared Wubie , yaredwu02@gmail.com]
 
 💬 Example Output
 
-
 Title: Example Domain
 Description: This domain is for use in illustrative examples...
 Links: [Example Link - https://example.com/more]
@@ -126,4 +115,3 @@ Images: [Image{Src: "/image.jpg", Alt: "Example"}]
 Word Count: 452
 Read Time (min): 2
 Summary: Example Domain is a placeholder page used...
-```
