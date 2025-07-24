@@ -8,6 +8,7 @@ import (
 	"github.com/PuerkitoBio/goquery"
 )
 
+///
 func fetchDocument(url string) (*goquery.Document, error) {
 	client := &http.Client{
 		Timeout: 10 * time.Second,
